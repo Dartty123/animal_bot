@@ -70,13 +70,13 @@ async def shoe_cure_animal(message: Message, state: FSMContext):
     await message.answer(text=msg)
 
 
-@animal_router.message(F.text == "Додати новий товар")
+@animal_router.message(F.text == "Додати нову тварину")
 async def add_animal(message: Message, state: FSMContext):
     await state.clear()
     await state.set_state(AnimalForm.name)
     await edit_or_answer(
         message=message,
-        text="Введіть назву товару"
+        text="Введіть назву тварини"
     )
 
 
