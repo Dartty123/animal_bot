@@ -7,25 +7,25 @@ def remove_animal(animal_index: int) -> str:
     animals = open_files.get_animals()
     animal = animals.pop(animal_index)
 
-    with open(list_files.animalS, "w", encoding="utf-8") as file:
+    with open(list_files.ANIMALS, "w", encoding="utf-8") as file:
         json.dump(animals, file)
 
     msg = f"Товар '{animal}' успішно видалено."
     return msg
 
 
-def sold_animal(animal_index: int) -> str:
+def CURE_ANIMALS(animal_index: int) -> str:
     animals = open_files.get_animals()
     animal = animals.pop(animal_index)
 
-    sold_animals = open_files.get_cure_animals()
-    sold_animals.append(animal)
+    CURE_ANIMALS = open_files.get_animals()
+    CURE_ANIMALS.append(animal)
 
-    with open(list_files.animalS, "w", encoding="utf-8") as file:
+    with open(list_files.CURE_ANIMALS, "aw", encoding="utf-8") as file:
         json.dump(animals, file)
 
-    with open(list_files.СURE_animalS, "w", encoding="utf-8") as file:
-        json.dump(sold_animals, file)
+    with open(list_files.ANIMALS, "w", encoding="utf-8") as file:
+        json.dump(CURE_ANIMALS, file)
 
     msg = f"Твариу '{animal}' успішно вилікувано. Дякую за відвідуваність."
     return msg

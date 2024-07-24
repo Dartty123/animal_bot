@@ -23,8 +23,6 @@ def get_animals(path: str = list_files.ANIMALS) -> list[str]:
 
     return ANIMALS
 
-def get_animal(path: str = list_files.ANIMALS) -> list[str]:
-    with open(path, "r", encoding="utf-8") as file:
-        ANIMALS = json.load(file)
-
-    return ANIMALS
+def get_animal(animal_index: int) -> str:
+    animals = get_animals()
+    return animals[animal_index]
