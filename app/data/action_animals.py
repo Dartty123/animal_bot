@@ -21,7 +21,7 @@ def CURE_ANIMALS(animal_index: int) -> str:
     CURE_ANIMALS = open_files.get_animals()
     CURE_ANIMALS.append(animal)
 
-    with open(list_files.CURE_ANIMALS, "aw", encoding="utf-8") as file:
+    with open(list_files.CURE_ANIMALS, "w", encoding="utf-8") as file:
         json.dump(animals, file)
 
     with open(list_files.ANIMALS, "w", encoding="utf-8") as file:

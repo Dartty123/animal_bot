@@ -26,3 +26,9 @@ def get_animals(path: str = list_files.ANIMALS) -> list[str]:
 def get_animal(animal_index: int) -> str:
     animals = get_animals()
     return animals[animal_index]
+
+def get_reviews(path: str = list_files.REVIEWS) -> list:
+    with open(path, "r", encoding="utf-8") as file:
+        reviews = json.load(file)
+
+    return reviews
