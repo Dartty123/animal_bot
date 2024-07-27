@@ -32,3 +32,7 @@ def get_reviews(path: str = list_files.REVIEWS) -> list:
         reviews = json.load(file)
 
     return reviews
+
+def get_cure_animal(path: str = list_files.ANIMALS) -> list[str]:
+    with open(path, "r", encoding="utf-8") as file:
+        ANIMALS = json.load(file)

@@ -51,9 +51,9 @@ async def remove_animal(call_back: CallbackQuery, state: FSMContext):
 
 
 @animal_router.callback_query(F.data.startswith("cure_animal_"))
-async def CURE_ANIMAL(call_back: CallbackQuery, state: FSMContext):
+async def cure_animal(call_back: CallbackQuery, state: FSMContext):
     animal_index = int(call_back.data.split("_")[-1])
-    msg = action_animals.CURE_ANIMALS(animal_index)
+    msg = action_animals.cure_animal(animal_index)
     await edit_or_answer(
         message=call_back.message,
         text=msg
