@@ -38,10 +38,10 @@ def add_animal(animal: str) -> str:
         msg = f"Тварина '{animal}' вже є у списку."
         return msg
 
-    animals.append(animals)
+    animals.append(animal)
 
     with open(list_files.ANIMALS, "w", encoding="utf-8") as file:
         json.dump(animals, file)
 
-    msg = f"Тварину '{animals}' успішно додано."
+    msg = f"Тварину '{animal}' успішно додано."
     return msg
