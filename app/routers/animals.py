@@ -62,7 +62,7 @@ async def cure_animal(call_back: CallbackQuery, state: FSMContext):
 
 @animal_router.message(F.text == "Показати список вилікуваних тварин")
 async def shoe_cure_animal(message: Message, state: FSMContext):
-    CURE_ANIMALS = open_files.get_animals()
+    CURE_ANIMALS = open_files.get_cure_animals()
     msg = ""
     for i, animal in enumerate(CURE_ANIMALS, start=1):
         msg += f"{i}. {animal}\n"
