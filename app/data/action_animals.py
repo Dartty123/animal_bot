@@ -10,7 +10,7 @@ def remove_animal(animal_index: int) -> str:
     with open(list_files.ANIMALS, "w", encoding="utf-8") as file:
         json.dump(animals, file)
 
-    msg = f"Товар '{animal}' успішно видалено."
+    msg = f"Тварину '{animal}' успішно видалено."
     return msg
 
 
